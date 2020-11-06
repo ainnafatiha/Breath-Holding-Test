@@ -1,0 +1,68 @@
+<!-- Table of Content
+
+1. Code for instruction
+2. Code for circle loader
+3. Code for performance table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bht.css">
+    <meta http-equiv="refresh" content="74">
+    <title>Breath Holding Test</title>
+</head>
+<body>
+  
+  <!-- 1. Code for instruction -->
+  <div class="breath-in">
+    <div class="title1">Get ready to take deep breath</div>
+    <button class="title2">
+      Take a deep breath
+    </button>
+    <div class="title3">Hold your breath</div>
+  </div>
+
+    <!-- 2. Code for circle loader -->
+    <div class= "circle-breath">
+        <svg width= "250" height="250" viewBox= "0 0 300 300">
+            <defs>
+                <linearGradient id="Gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%"  stop-color= "#0066ff" />
+                    <stop offset="50%"  stop-color= "#bf00ff" />
+                </linearGradient>
+            </defs>
+            <circle class="empty-circle" cx="150" cy="150" r="100" ></circle>
+            <circle class="load" cx="150" cy="150" r="100" transform="rotate(-90 150 150)"></circle>
+            <text class="timer" id="time" stroke-width="3" x="150" y="55%" text-anchor="middle"></text>
+        </svg>
+    </div>
+
+    <!-- 3. Code for performance table -->
+    <div class="table-breath">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Performance</th>
+            <th scope="col">Duration (s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Performance">Bad</td>
+            <td data-label="Duration (s)">0-35</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Performance">Moderate</td>
+            <td data-label="Duration (s)">36-50</td>
+          <tr>
+            <td scope="row" data-label="Performance">Good</td>
+            <td data-label="Duration (s)">>50</td>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="bht.js"></script>
+</body>
+</html>

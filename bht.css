@@ -1,0 +1,238 @@
+/* Table of Content
+
+1. Code for circle loader
+2. Code for instruction
+3. Code for performance table */
+
+
+/* 1. Code for circle loader */
+html,
+.body
+{
+  align-items: center;
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 30%;
+  justify-content: center;
+}
+
+.circle-breath 
+{
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;;
+  transform: translate(-50%, -50%);
+}
+
+.empty-circle
+{
+  stroke: #cccccc;
+  stroke-width: 14;
+  fill: transparent;
+}
+
+.load
+{
+  fill-opacity: 0;
+  fill: url(#Gradient);
+  stroke-dasharray: 628;
+  stroke-linecap: round;
+  stroke-width: 14;
+  stroke: url(#Gradient);
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  animation: load 73s linear infinite;
+  animation-delay: 8s;
+}
+
+.timer
+{
+  fill: url(#Gradient);
+  font-size: 35px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@keyframes load {
+  0% { stroke-dashoffset: 638;}
+  85% { stroke-dashoffset: 0;}
+  /* where the circle delay for 10sec */
+  100% { stroke-dashoffset: 0;} 
+}
+
+/* 2. Code for instruction */
+.breath-in 
+{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  top:5px;  
+}
+
+.title1, 
+.title2,
+.title3 {
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  color: #bf00ff;
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  opacity: 0;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title1 {
+  animation: ready 67s;
+}
+
+.title2 {
+  animation: start-breath 67s;
+  animation-delay: 3s;
+}
+
+.title3 {
+  animation: hold 73s;
+  animation-delay: 8.5s;
+}
+
+@keyframes ready {
+  0% {opacity: 1; bottom: 0px;}
+  3% {bottom: 0px; opacity: 1;}
+  4% {bottom: 0px; opacity: 0;}
+  100% {opacity:0; bottom: 0px;}
+}
+
+@keyframes start-breath {
+  0% {font-size: 5px;
+      font-weight: 100;
+      opacity:1}
+  7% {font-size: 35px;
+      font-weight: 900;
+      text-shadow: 0px 0px 5px white;
+      opacity:1}
+  8% {opacity:0; bottom:0;}
+  100% {opacity:0; bottom: 0px;}
+}
+
+@keyframes hold {
+  0% {opacity: 1; bottom: 0px;}
+  9% {bottom:0; opacity: 1;}
+  55% {bottom:0; opacity: 1;}
+  75% {bottom:0; opacity: 1;}
+  85% {bottom:0; opacity: 1;}
+  90% {bottom: 0; opacity:0}
+  100% {opacity:0; bottom: 0px;}
+}
+
+/* 3. Code for performance table */
+.table-breath {
+  border:0;
+  left: 4%;
+  margin: auto;
+  margin: auto;
+  position: absolute;
+  top: 70%;
+}
+
+table {
+  align-items: center;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  table-layout: fixed;
+  text-align: center;
+  width: 50%;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 2px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    top: 60%;
+  }
+
+  table thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
+  
+  
+
+
+
