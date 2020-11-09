@@ -17,7 +17,6 @@ html,
 {
   display: flex;
   justify-content: center;
-  top: 40%;
 }
 
 .empty-circle
@@ -44,7 +43,7 @@ html,
 .timer
 {
   fill: url(#Gradient);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -59,11 +58,10 @@ html,
 /* 2. Code for instruction */
 .breath-in {
   display: block;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 200;
   font-weight: bold;
   justify-content: center;
-  left: 50%;
   letter-spacing: 0.5px;
   line-height: 1;
   padding: 3px 10px;
@@ -76,7 +74,7 @@ html,
 }
 #breath-count:after {
   content:"";
-  animation: breathing 73s linear infinite;
+  animation: breathing 74s linear infinite;
 }
 
 @keyframes breathing {
