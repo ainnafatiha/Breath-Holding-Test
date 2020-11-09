@@ -37,7 +37,7 @@ html,
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
   animation: load 73s linear infinite;
-  animation-delay: 8s;
+  animation-delay: 10.5s;
 }
 
 .timer
@@ -79,24 +79,27 @@ html,
 
 @keyframes breathing {
   0% {
-    content: "Take a deep breath in 5";
+    content: "Ready?";
   }
   3% {
-    content: "Take a deep breath in 4";
+    content: "In the count of 5";
   }
-  5% {
-    content: "Take a deep breath in 3";
+  4% {
+    content: "In the count of 4";
   }
-  7% {
-    content: "Take a deep breath in 2";
+  6% {
+    content: "In the count of 3";
+  }
+  8% {
+    content: "In the count of 2";
   }
   9% {
-    content: "Take a deep breath in 1";
+    content: "In the count of 1";
   }
   11% {
-    content: "Hold your breath";
+    content: "Take a deep breath";
   }
-  16% {
+  17% {
     content: "Hold your breath";
   }
   50% {
