@@ -9,20 +9,15 @@
 html,
 .body
 {
-  align-items: center;
-  display: flex;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 30%;
-  justify-content: center;
 }
 
 .circle-breath 
 {
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 35%;;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  top: 40%;
 }
 
 .empty-circle
@@ -49,7 +44,7 @@ html,
 .timer
 {
   fill: url(#Gradient);
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -67,6 +62,7 @@ html,
   font-size: 22px;
   font-weight: 200;
   font-weight: bold;
+  justify-content: center;
   left: 50%;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -100,30 +96,27 @@ html,
     content: "Take a deep breath in 1";
   }
   11% {
-    content: "And hold your breath";
+    content: "Hold your breath";
   }
   16% {
-    content: "And hold your breath";
+    content: "Hold your breath";
   }
   50% {
-    content: "And hold your breath";
+    content: "Hold your breath";
   }
   80% {
-    content: "And hold your breath";
+    content: "Hold your breath";
   }
   100% {
-    content: "And hold your breath";
+    content: "Hold your breath";
   }
 }
 
 /* 3. Code for performance table */
 .table-breath {
   border:0;
-  left: 4%;
-  margin: auto;
-  margin: auto;
-  position: absolute;
-  top: 55%;
+  display: block;
+  justify-content: center;
 }
 
 table {
@@ -138,7 +131,7 @@ table {
   padding: 0;
   table-layout: fixed;
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 
 table tr {
