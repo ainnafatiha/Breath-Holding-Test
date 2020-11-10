@@ -18,7 +18,7 @@ function startTimer(secs) {
   setTimeout(() => {
     timeInSecs = parseInt(secs);
     ticker = setInterval("tick()", 1000);
-  }, 10000); 
+  }, 34000); 
 }
 
 function tick() {

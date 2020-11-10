@@ -36,8 +36,8 @@ html,
   stroke: url(#Gradient);
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
-  animation: load 73s linear infinite;
-  animation-delay: 10.5s;
+  animation: load 105s linear infinite;
+  animation-delay: 34.5s;
 }
 
 .timer
@@ -50,7 +50,7 @@ html,
 
 @keyframes load {
   0% { stroke-dashoffset: 638;}
-  85% { stroke-dashoffset: 0;}
+  60% { stroke-dashoffset: 0;}
   /* where the circle delay for 10sec */
   100% { stroke-dashoffset: 0;} 
 }
@@ -60,7 +60,6 @@ html,
   display: block;
   font-size: 20px;
   font-weight: 200;
-  font-weight: bold;
   justify-content: center;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -69,43 +68,64 @@ html,
   text-transform: uppercase;
 }
 
+#breath-title {
+  font-size: 24px;
+}
+
+#breath-intro {
+  border-radius: 25px;
+  border: 3px solid  #f9e6ff;
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  text-transform: none;
+}
+
 #breath-count {
   color: #000;
 }
 #breath-count:after {
   content:"";
-  animation: breathing 74s linear infinite;
+  animation: breathing 105s linear infinite;
 }
 
 @keyframes breathing {
   0% {
     content: "Ready?";
   }
-  3% {
-    content: "In the count of 5";
+  20% {
+    content: "Ready?";
   }
-  4% {
-    content: "In the count of 4";
+  22% {
+    content: "It's going to start in 3";
   }
-  6% {
-    content: "In the count of 3";
+  24% {
+    content: "It's going to start in 2";
   }
-  8% {
-    content: "In the count of 2";
+  26% {
+    content: "It's going to start in 1";
   }
-  9% {
-    content: "In the count of 1";
+  28% {
+    content: "Take a deep breath for 3";
   }
-  11% {
-    content: "Take a deep breath";
+  30% {
+    content: "Take a deep breath for 2";
   }
-  17% {
+  32% {
+    content: "Take a deep breath for 1";
+  }
+  34% {
     content: "Hold your breath";
   }
-  50% {
+  40% {
     content: "Hold your breath";
   }
-  80% {
+  70% {
+    content: "Hold your breath";
+  }
+  90% {
     content: "Hold your breath";
   }
   100% {
