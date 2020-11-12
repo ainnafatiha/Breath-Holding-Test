@@ -37,13 +37,14 @@ html,
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
   animation: load 105s linear infinite;
-  animation-delay: 34.5s;
+  animation-delay: 39.5s;
 }
 
-.timer
+.timer,
+.prepare-timer
 {
   fill: url(#Gradient);
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -58,12 +59,11 @@ html,
 /* 2. Code for instruction */
 .breath-in {
   display: block;
+  justify-content: center;
   font-size: 20px;
   font-weight: 200;
-  justify-content: center;
   letter-spacing: 0.5px;
   line-height: 1;
-  padding: 3px 10px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -99,30 +99,12 @@ html,
     content: "Ready?";
   }
   22% {
-    content: "It's going to start in 3";
-  }
-  24% {
-    content: "It's going to start in 2";
-  }
-  26% {
-    content: "It's going to start in 1";
-  }
-  28% {
-    content: "Take a deep breath for 3";
-  }
-  30% {
-    content: "Take a deep breath for 2";
-  }
-  32% {
-    content: "Take a deep breath for 1";
+    content: "It's going to start in";
   }
   34% {
-    content: "Hold your breath";
+    content: "Take a deep breath for";
   }
   40% {
-    content: "Hold your breath";
-  }
-  70% {
     content: "Hold your breath";
   }
   90% {
@@ -138,13 +120,14 @@ html,
   border:0;
   display: block;
   justify-content: center;
+  text-align: center;
 }
 
 table {
   align-items: center;
   border-collapse: collapse;
   border: 1px solid #ccc;
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.25;
   margin-left: auto;
@@ -218,14 +201,3 @@ table th {
     border-bottom: 0;
   }
 }
-
-
-
-
-
-
-  
-  
-
-
-
