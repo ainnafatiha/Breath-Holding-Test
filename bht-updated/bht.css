@@ -198,9 +198,9 @@ html,
 
 .breath-performance {
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
-  display: flex;
 }
 
 .average-margin {
@@ -208,27 +208,27 @@ html,
 }
 
 .dot-red {
-  height: 10px;
-  width: 10px;
   background-color: #ff1a1a;
   border-radius: 50%;
   display: inline-block;
+  height: 10px;
+  width: 10px;
 }
 
 .dot-yellow {
-  height: 10px;
-  width: 10px;
   background-color: #ffcc00;
   border-radius: 50%;
   display: inline-block;
+  height: 10px;
+  width: 10px;
 }
 
 .dot-green {
-  height: 10px;
-  width: 10px;
   background-color: #009900;
   border-radius: 50%;
   display: inline-block;
+  height: 10px;
+  width: 10px;
 }
   
 /* 4. CODES FOR RESET BUTTON */
@@ -238,22 +238,21 @@ html,
 }
 
 .reset-button {
-  /* background-image: linear-gradient(to bottom, #00d4ff, #2e5aa9); */
-  background: rgb(99,109,237);
   background: linear-gradient(155deg, rgba(99,109,237,1) 40%, rgba(162,132,215,1) 100%);
+  background: rgb(99,109,237);
   border-radius: 25px;
   border: none;
   color: #ffffff;
-  text-align: center;
+  cursor: pointer;
   font-size: 14px;
+  margin: 5px;
   padding: 5px;
+  text-align: center;
+  transition: all 0.5s;
   width: 80px;
-  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+  -webkit-transition: all 0.5s;
 }
 
 
