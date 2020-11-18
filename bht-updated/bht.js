@@ -21,7 +21,7 @@ function secondPassed() {
     {
         minutes = minutes;  
     }
-    document.querySelector(".prepare-timer").innerHTML = (is_negative ? '-' : '') + minutes + remainingSeconds;
+    document.querySelector(".prepare-timer").innerHTML = (is_negative ? '-' : '') + minutes + remainingSeconds + "s";
     seconds--;
 }
 
