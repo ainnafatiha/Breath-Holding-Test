@@ -1,0 +1,230 @@
+/* TABLE OF CONTENT
+
+1. CODES FOR INSTRUCTION
+2. CODES FOR CIRCLE LOADER
+3. CODES FOR PERFORMANCE INDICATOR
+4. CODES FOR RESET BUTTON */
+
+
+/* 1. CODES FOR INSTRUCTION */
+html,
+.body
+{
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 30%;
+}
+
+.circle-breath 
+{
+  display: flex;
+  justify-content: center;
+}
+
+#external-circle {
+  position: relative;
+  transform: scale(1);
+  animation: pulse-external 83s infinite;
+  animation-delay: 6s;
+}
+
+@keyframes pulse-external {
+  0% { transform: scale(0.60); }
+  6% { transform: scale(1); }
+  50% { transform: scale(1); }
+  /* the circle starts to pulse */
+  52% { transform: scale(0.95); }
+  53% { transform: scale(1); }
+  54% { transform: scale(0.95); }
+  55% { transform: scale(1); }
+  56% { transform: scale(0.95); }
+  57% { transform: scale(1); }
+  58% { transform: scale(0.95); }
+  59% { transform: scale(1); }
+  60% { transform: scale(0.95); }
+  61% { transform: scale(1); }
+  62% { transform: scale(0.95); }
+  63% { transform: scale(1); }
+  64% { transform: scale(0.95); }
+  65% { transform: scale(1); }
+  66% { transform: scale(0.95); }
+  67% { transform: scale(1); }
+  68% { transform: scale(0.95); }
+  69% { transform: scale(1); }
+  70% { transform: scale(0.95); }
+  71% { transform: scale(1); }
+  72% { transform: scale(0.95); }
+  73% { transform: scale(1); }
+  74% { transform: scale(0.95); }
+  75% { transform: scale(1); }
+  76% { transform: scale(0.95); }
+  77% { transform: scale(1); }
+  78% { transform: scale(0.95); }
+  79% { transform: scale(1); }
+  80% { transform: scale(0.95); }
+  82% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+#internal-circle {
+  position: absolute;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  border-radius: 50%;
+	transform: scale(1);
+  animation: pulse 83s infinite;
+  animation-delay: 6s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.60); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+  8% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+  50% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+  /* where the cirlce starts to pulse */
+  52% { transform: scale(0.95); }
+  53% { transform: scale(1); }
+  54% { transform: scale(0.95); }
+  55% { transform: scale(1); }
+  56% { transform: scale(0.95); }
+  57% { transform: scale(1); }
+  58% { transform: scale(0.95); }
+  59% { transform: scale(1); }
+  60% { transform: scale(0.95); }
+  61% { transform: scale(1); }
+  62% { transform: scale(0.95); }
+  63% { transform: scale(1); }
+  64% { transform: scale(0.95); }
+  65% { transform: scale(1); }
+  66% { transform: scale(0.95); }
+  67% { transform: scale(1); }
+  68% { transform: scale(0.95); }
+  69% { transform: scale(1); }
+  70% { transform: scale(0.95); }
+  71% { transform: scale(1); }
+  72% { transform: scale(0.95); }
+  73% { transform: scale(1); }
+  74% { transform: scale(0.95); }
+  75% { transform: scale(1); }
+  76% { transform: scale(0.95); }
+  77% { transform: scale(1); }
+  78% { transform: scale(0.95); }
+  79% { transform: scale(1); }
+  80% { transform: scale(0.95); }
+  82% { transform: scale(1); }
+  100% { transform: scale(1); } 
+}
+
+.empty-circle
+{
+  stroke: #cccccc;
+  stroke-width: 8;
+  fill: transparent;
+}
+
+.load
+{
+  fill-opacity: 0;
+  fill: url(#Gradient);
+  stroke-dasharray: 628;
+  stroke-linecap: round;
+  stroke-width: 10;
+  stroke: url(#Gradient);
+  transform-origin: 50% 50%;
+  transform: rotate(-88deg);
+  animation: load 83s linear infinite;
+  animation-delay: 13s;
+}
+
+@keyframes load {
+  0% { stroke-dashoffset: 638;}
+  74% { stroke-dashoffset: 0;}
+  /* where the circle delay for 10sec */
+  100% { stroke-dashoffset: 0;} 
+}
+
+.timer,
+.prepare-timer
+{
+  fill: url(#Gradient);
+  font-size: 35px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* 2. CODES FOR CIRCLE LOADER*/
+.breath-in {
+  display: block;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#breath-title {
+  font-size: 24px;
+}
+
+#breath-intro {
+  border-radius: 25px;
+  border: 3px solid  #f9e6ff;
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+#breath-count {
+  color: #000;
+}
+#breath-count:after {
+  content:"";
+  animation: breathing-intro 83s linear infinite;
+}
+
+@keyframes breathing-intro {
+  0% { content: "Ready?"; }
+  3% { content: "Get ready to take a deep breath in"; }
+  11% { content: "Take a deep breath for"; }
+  18% { content: "Hold your breath"; }
+  90% { content: "Hold your breath"; }
+  100% { content: "Hold your breath"; }
+}
+
+/* 3. CODE FOR PERFORMANCE INDICATOR */
+.breath-performance {
+  justify-content: center;
+  text-align: center;
+}
+
+.dot-red {
+  height: 10px;
+  width: 10px;
+  background-color: #ff1a1a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-yellow {
+  height: 10px;
+  width: 10px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-green {
+  height: 10px;
+  width: 10px;
+  background-color: #009900;
+  border-radius: 50%;
+  display: inline-block;
+}
+  
+/* 4. CODES FOR RESET BUTTON */
+.reset-breath {
+  justify-content: center;
+  display: flex;
+}

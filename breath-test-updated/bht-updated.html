@@ -1,0 +1,66 @@
+<!-- TABLE OF CONTENT
+
+1. CODES FOR INSTRUCTION
+2. CODES FOR CIRCLE LOADER
+3. CODES FOR PERFORMANCE INDICATOR
+4. CODES FOR RESET BUTTON -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="83">
+    <link rel="stylesheet" href="bht-updated.css">
+    <title>Breath Holding Test</title>
+</head>
+<body>
+
+    <!-- 1. CODES FOR INSTRUCTION -->
+  <div class="breath-in">
+    <p id="breath-title">Breath Holding Test</p>
+    <p><span id="breath-count"></span></p>
+  </div>
+
+    <!-- 2. CODES FOR CIRCLE LOADER -->
+    <div class= "circle-breath">
+        <svg id= "external-circle" width= "250" height="250" viewBox= "0 0 10 10">
+            <defs>
+              <circle id="circle" cx="5" cy="5" r="4" stroke-width="0.12" fill="transparent" />
+            </defs>
+            <use xlink:href="#circle" stroke="#ffcc00" stroke-dasharray="0,6.15,8.50,30" />
+            <use xlink:href="#circle" stroke="#009900" stroke-dasharray="0,10.80,8.10,30" />
+            <use xlink:href="#circle" stroke="#ff1a1a" stroke-dasharray="6.40,12.45,10" />
+        </svg>
+        <svg id="internal-circle" width= "250" height="250" viewBox= "0 0 300 300">
+            <defs>
+                <linearGradient id="Gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%"  stop-color= "#2e5aa9" />
+                    <stop offset="100%"  stop-color= "#2e5aa9" />
+                </linearGradient>
+            </defs>
+            <circle class="empty-circle" cx="150" cy="150" r="100" ></circle>
+            <circle class="load" id="loader" cx="150" cy="150" r="100" transform="rotate(-90 150 150)"></circle>
+            <text class="prepare-timer" id="prepare" stroke-width="3" x="150" y="55%" text-anchor="middle"></text>
+            <text class="timer" id="time" stroke-width="3" x="150" y="55%" text-anchor="middle"></text>
+        </svg>
+    </div>
+    <br>
+
+    <!-- 3. CODES FOR PERFORMANCE INDICATOR -->
+    <div class= "breath-performance">Lung Capacity Performance
+        <p><span class="dot-red"></span>  Poor</p>
+        <p><span class="dot-yellow"></span>  Average</p>
+        <p><span class="dot-green"></span>  Amazing</p>         
+    </div>
+    <br>
+
+    <!-- 4. CODES FOR RESET BUTTON -->
+    <div class= "reset-breath">
+        <button onClick="window.location.reload();">Reset</button>
+    </div>
+    
+    <script src="bht-updated.js"></script>
+</body>
+</html>
