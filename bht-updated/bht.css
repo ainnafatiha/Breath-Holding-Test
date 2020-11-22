@@ -1,12 +1,12 @@
 /* TABLE OF CONTENT
 
-1. CODES FOR INSTRUCTION
-2. CODES FOR CIRCLE LOADER
+1. CODES FOR CIRCLE LOADER
+2. CODES FOR INSTRUCTION
 3. CODES FOR PERFORMANCE INDICATOR
 4. CODES FOR RESET BUTTON */
 
 
-/* 1. CODES FOR INSTRUCTION */
+/* 1. CODES FOR CIRCLE LOADER */
 html,
 .body
 {
@@ -29,7 +29,7 @@ html,
 
 @keyframes pulse-external {
   0% { transform: scale(0.60); }
-  6% { transform: scale(1); }
+  10% { transform: scale(1); }
   50% { transform: scale(1); }
   /* the circle starts to pulse */
   52% { transform: scale(0.95); }
@@ -76,7 +76,7 @@ html,
 
 @keyframes pulse {
   0% { transform: scale(0.60); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
-  8% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+  10% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
   50% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
   /* where the cirlce starts to pulse */
   52% { transform: scale(0.95); }
@@ -130,7 +130,7 @@ html,
   transform-origin: 50% 50%;
   transform: rotate(-88deg);
   animation: load 83s linear infinite;
-  animation-delay: 13s;
+  animation-delay: 12.5s;
 }
 
 @keyframes load {
@@ -148,7 +148,7 @@ html,
   font-weight: 300;
 }
 
-/* 2. CODES FOR CIRCLE LOADER*/
+/* 2. CODES FOR INSTRUCTION*/
 .breath-in {
   display: block;
   justify-content: center;
@@ -185,7 +185,7 @@ html,
 @keyframes breathing-intro {
   0% { content: "Ready?"; }
   3% { content: "Get ready to take a deep breath in"; }
-  11% { content: "Take a deep breath for"; }
+  11% { content: "Take a deep breath"; }
   18% { content: "Hold your breath"; }
   90% { content: "Hold your breath"; }
   100% { content: "Hold your breath"; }
@@ -232,14 +232,16 @@ html,
 }
   
 /* 4. CODES FOR RESET BUTTON */
-.reset-breath {
+.button-breath {
   justify-content: center;
   display: flex;
 }
 
-.reset-button {
-  background: linear-gradient(155deg, rgba(99,109,237,1) 40%, rgba(162,132,215,1) 100%);
-  background: rgb(99,109,237);
+.reset-button,
+.stop-button,
+.start-button {
+  background: rgb(61,114,209);
+  background: linear-gradient(180deg, rgba(61,114,209,1) 40%, rgba(176,145,231,1) 100%);
   border-radius: 25px;
   border: none;
   color: #ffffff;

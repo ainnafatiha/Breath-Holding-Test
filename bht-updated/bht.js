@@ -5,24 +5,21 @@
 
 
 // 1. CODES FOR PREPARATION TIMER
-let prepare = document.querySelector(".prepare-timer");
-var seconds = 3;
-var countdownTimer = setInterval(secondPassed, 1500);
-function secondPassed() {
-    var abs_seconds = Math.abs(seconds);
-    var is_negative = seconds > 0;
-    var minutes = Math.round((abs_seconds - 30)/60);
-    var remainingSeconds = abs_seconds % 60; 
-    if (remainingSeconds > 3) 
-    {
-        remainingSeconds = '';
+var timeLeft = 3;
+var elem = document.querySelector(".prepare-timer");
+var timerId;
+
+function startCountdown() {
+  timerId = setInterval("countdown()", 1200);
+}
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+    } else {
+        elem.innerHTML = timeLeft + 's';
+        timeLeft--;
     }
-    if (minutes < 3) 
-    {
-        minutes = minutes;  
-    }
-    document.querySelector(".prepare-timer").innerHTML = (is_negative ? '-' : '') + minutes + remainingSeconds + "s";
-    seconds--;
 }
 
 // 2. CODES FOR HOLD YOUR BREATH TIMER
@@ -35,7 +32,7 @@ function startTimer(secs) {
   setTimeout(() => {
     timeInSecs = parseInt(secs);
     ticker = setInterval("tick()", 1000);
-  }, 12500); 
+  }, 12000); 
 }
 
 function tick() {
@@ -53,5 +50,4 @@ function tick() {
   document.querySelector(".prepare-timer").style.display = 'none';
 }
 startTimer(0 * 60);
-
 

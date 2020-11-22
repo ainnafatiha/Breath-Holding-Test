@@ -59,7 +59,11 @@
     <br>
 
     <!-- 4. CODES FOR RESET BUTTON -->
-    <div class= "reset-breath">
+    <div class= "button-breath">
+        <button class="start-button" id= "start" onClick="startCountdown()">Start</button>
+
+        <button class="stop-button" onClick="clearInterval(ticker);">Stop</button>
+        
         <button class="reset-button" onClick="window.location.reload();">Reset</button>
     </div>
     
