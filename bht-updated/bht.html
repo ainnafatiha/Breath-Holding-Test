@@ -20,7 +20,7 @@
     <!-- 1. CODES FOR INSTRUCTION -->
   <div class="breath-in">
     <p id="breath-title">Breath Holding Test</p>
-    <p><span id="breath-count"></span></p>
+    <p class="breath-count"></p>
   </div>
 
     <!-- 2. CODES FOR CIRCLE LOADER -->
@@ -58,11 +58,11 @@
     
     <br>
 
-    <!-- 4. CODES FOR RESET BUTTON -->
+    <!-- 4. CODES FOR BUTTONS -->
     <div class= "button-breath">
-        <button class="start-button" id= "start" onClick="startCountdown()">Start</button>
+        <button class="start-button" onClick="startCountdown();startAnimate()">Start</button>
 
-        <button class="stop-button" onClick="clearInterval(ticker);">Stop</button>
+        <button class="stop-button" onClick="clearInterval(ticker);stopAnimate()">Stop</button>
         
         <button class="reset-button" onClick="window.location.reload();">Reset</button>
     </div>

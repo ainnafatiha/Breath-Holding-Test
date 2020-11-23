@@ -23,7 +23,7 @@ html,
 #external-circle {
   position: relative;
   transform: scale(1);
-  animation: pulse-external 83s infinite;
+  animation: pulse-external 83s;
   animation-delay: 6s;
 }
 
@@ -70,7 +70,7 @@ html,
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   border-radius: 50%;
 	transform: scale(1);
-  animation: pulse 83s infinite;
+  animation: pulse 83s;
   animation-delay: 6s;
 }
 
@@ -148,6 +148,7 @@ html,
   font-weight: 300;
 }
 
+
 /* 2. CODES FOR INSTRUCTION*/
 .breath-in {
   display: block;
@@ -163,21 +164,17 @@ html,
   font-size: 22px;
 }
 
-#breath-intro {
-  border-radius: 25px;
-  border: 3px solid  #f9e6ff;
-  display: inline-block;
-  padding: 10px;
-  font-size: 14px;
+.breath-count {
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  text-transform: none;
 }
 
-#breath-count {
+/* .breath-count {
   color: #000;
 }
-#breath-count:after {
+.breath-count:after {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
   content:"";
   animation: breathing-intro 83s linear infinite;
 }
@@ -189,7 +186,8 @@ html,
   18% { content: "Hold your breath"; }
   90% { content: "Hold your breath"; }
   100% { content: "Hold your breath"; }
-}
+} */
+
 
 /* 3. CODE FOR PERFORMANCE INDICATOR */
 .performance-indicator {

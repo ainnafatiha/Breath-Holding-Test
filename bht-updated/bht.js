@@ -10,6 +10,7 @@ var elem = document.querySelector(".prepare-timer");
 var timerId;
 
 function startCountdown() {
+  document.querySelector(".breath-count").innerHTML = "Get read to take a deep breath in";
   timerId = setInterval("countdown()", 1200);
 }
 
@@ -36,6 +37,7 @@ function startTimer(secs) {
 }
 
 function tick() {
+  document.querySelector(".breath-count").innerHTML = "Hold your breath";
   var secs = timeInSecs;
     if (secs < 60) {
         timeInSecs++;
@@ -51,3 +53,11 @@ function tick() {
 }
 startTimer(0 * 60);
 
+//3. CSS FUNCTION
+function startAnimate() {
+  document.querySelector(".breath-count").style.webkitAnimationPlayState='running';
+}
+
+function stopAnimate() {
+  document.querySelector(".load").style.animationPlayState='paused';
+}
