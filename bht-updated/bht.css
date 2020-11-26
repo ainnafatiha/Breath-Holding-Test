@@ -3,7 +3,8 @@
 1. CODES FOR CIRCLE LOADER
 2. CODES FOR INSTRUCTION
 3. CODES FOR PERFORMANCE INDICATOR
-4. CODES FOR RESET BUTTON */
+4. CODES FOR BUTTONS
+5. CODES FOR SHARE BUTTON */
 
 
 /* 1. CODES FOR CIRCLE LOADER */
@@ -20,11 +21,11 @@ html,
   justify-content: center;
 }
 
-#external-circle {
+.external-circle {
   position: relative;
   transform: scale(1);
   animation: pulse-external 83s;
-  animation-delay: 6s;
+  animation-play-state: paused;
 }
 
 @keyframes pulse-external {
@@ -65,13 +66,13 @@ html,
   100% { transform: scale(1); }
 }
 
-#internal-circle {
+.internal-circle {
   position: absolute;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   border-radius: 50%;
 	transform: scale(1);
   animation: pulse 83s;
-  animation-delay: 6s;
+  animation-play-state: paused;
 }
 
 @keyframes pulse {
@@ -130,7 +131,7 @@ html,
   transform-origin: 50% 50%;
   transform: rotate(-88deg);
   animation: load 83s linear infinite;
-  animation-delay: 12.5s;
+  animation-delay: 6s;
 }
 
 @keyframes load {
@@ -168,26 +169,6 @@ html,
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* .breath-count {
-  color: #000;
-}
-.breath-count:after {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  content:"";
-  animation: breathing-intro 83s linear infinite;
-}
-
-@keyframes breathing-intro {
-  0% { content: "Ready?"; }
-  3% { content: "Get ready to take a deep breath in"; }
-  11% { content: "Take a deep breath"; }
-  18% { content: "Hold your breath"; }
-  90% { content: "Hold your breath"; }
-  100% { content: "Hold your breath"; }
-} */
-
 
 /* 3. CODE FOR PERFORMANCE INDICATOR */
 .performance-indicator {
@@ -229,7 +210,7 @@ html,
   width: 10px;
 }
   
-/* 4. CODES FOR RESET BUTTON */
+/* 4. CODES FOR BUTTONS */
 .button-breath {
   justify-content: center;
   display: flex;
@@ -246,7 +227,7 @@ html,
   cursor: pointer;
   font-size: 14px;
   margin: 5px;
-  padding: 5px;
+  padding: 4px;
   text-align: center;
   transition: all 0.5s;
   width: 80px;
@@ -254,6 +235,82 @@ html,
   -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+
+/* 5. CODES FOR SHARE BUTTON */
+.share-result {
+  justify-content: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.share-button {
+  width: 90px;
+  height: 30px;
+  background: #dfe6e9;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
+}
+
+.share-button span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(61,114,209);
+  background: linear-gradient(180deg, rgba(61,114,209,1) 40%, rgba(176,145,231,1) 100%);
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 30px;
+  z-index: 999;
+  transition: 0.6s linear;
+  border-radius: 20px;
+  /* opacity: 0; */
+}
+
+.share-button:hover span {
+  transform: translateX(-100%);
+  transition-delay: 0.3s;
+}
+
+.share-button a {
+  flex: 1; /* flex-grow | flex shrink | flex basis */
+  font-size: 18px;
+  color: #2d3436;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.share-button:hover a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.share-button a:nth-of-type(1) {
+  transition-delay: 1s;
+}
+
+.share-button a:nth-of-type(2) {
+  transition-delay: 0.8s;
+}
+
+.share-button a:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+
+.share-button a:nth-of-type(4) {
+  transition-delay: 0.4s;
+}
+
 
 
 

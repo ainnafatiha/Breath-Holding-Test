@@ -1,7 +1,8 @@
 /* TABLE OF CONTENT
 
 1. CODES FOR PREPARATION TIMER
-2. CODES FOR HOLD YOUR BREATH TIMER */
+2. CODES FOR HOLD YOUR BREATH TIMER
+3. CODES FOR CSS FUNCTION */
 
 
 // 1. CODES FOR PREPARATION TIMER
@@ -10,7 +11,7 @@ var elem = document.querySelector(".prepare-timer");
 var timerId;
 
 function startCountdown() {
-  document.querySelector(".breath-count").innerHTML = "Get read to take a deep breath in";
+  document.querySelector(".breath-count").innerHTML = "Take a deep breath";
   timerId = setInterval("countdown()", 1200);
 }
 
@@ -33,7 +34,7 @@ function startTimer(secs) {
   setTimeout(() => {
     timeInSecs = parseInt(secs);
     ticker = setInterval("tick()", 1000);
-  }, 12000); 
+  }, 5000); 
 }
 
 function tick() {
@@ -53,11 +54,15 @@ function tick() {
 }
 startTimer(0 * 60);
 
-//3. CSS FUNCTION
-function startAnimate() {
-  document.querySelector(".breath-count").style.webkitAnimationPlayState='running';
-}
-
+//3. CODES FOR CSS FUNCTION
 function stopAnimate() {
   document.querySelector(".load").style.animationPlayState='paused';
+  document.querySelector(".internal-circle").style.animationPlayState='paused';
+  document.querySelector(".external-circle").style.animationPlayState='paused';
+}
+
+function startAnimate() {
+  document.querySelector(".external-circle").style.animationPlayState='running';
+  document.querySelector(".internal-circle").style.animationPlayState='running';
+  document.querySelector(".timer");
 }

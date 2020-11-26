@@ -3,7 +3,8 @@
 1. CODES FOR INSTRUCTION
 2. CODES FOR CIRCLE LOADER
 3. CODES FOR PERFORMANCE INDICATOR
-4. CODES FOR RESET BUTTON -->
+4. CODES FOR SHARE BUTTONS
+5. CODES FOR SHARE BUTTON -->
 
 
 <!DOCTYPE html>
@@ -11,8 +12,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="83">
-    <link rel="stylesheet" href="bht.css">
+    <meta http-equiv="refresh" content="72">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="bht.css" >
     <title>Breath Holding Test</title>
 </head>
 <body>
@@ -25,7 +27,7 @@
 
     <!-- 2. CODES FOR CIRCLE LOADER -->
     <div class= "circle-breath">
-        <svg id= "external-circle" width= "250" height="250" viewBox= "0 0 10 10">
+        <svg class= "external-circle" width= "250" height="250" viewBox= "0 0 10 10">
             <defs>
               <circle id="circle" cx="5" cy="5" r="4" stroke-width="0.12" fill="transparent" />
             </defs>
@@ -33,7 +35,7 @@
             <use xlink:href="#circle" stroke="#009900" stroke-dasharray="0,10.80,8.10,30" />
             <use xlink:href="#circle" stroke="#ff1a1a" stroke-dasharray="6.40,12.45,10" />
         </svg>
-        <svg id="internal-circle" width= "250" height="250" viewBox= "0 0 300 300">
+        <svg class="internal-circle" width= "250" height="250" viewBox= "0 0 300 300">
             <defs>
                 <linearGradient id="Gradient" x1="0%" x2="100%" y1="0%" y2="100%">
                     <stop offset="0%"  stop-color= "#2e5aa9" />
@@ -60,13 +62,27 @@
 
     <!-- 4. CODES FOR BUTTONS -->
     <div class= "button-breath">
-        <button class="start-button" onClick="startCountdown();startAnimate()">Start</button>
+        <button class="start-button" onClick="startCountdown(); startAnimate()">Start</button>
 
         <button class="stop-button" onClick="clearInterval(ticker);stopAnimate()">Stop</button>
         
         <button class="reset-button" onClick="window.location.reload();">Reset</button>
     </div>
+    <br>
+
+    <!-- 5. CODES FOR SHARE BUTTON -->
+    <div class="share-result">
+        <div class="share-button">
+            <span class="fas fa-share-alt"></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${https://www.doctoroncall.com.my/health-centre/smoking-cessation/test-your-lung-capacity-today}"><i class="fab fa-facebook-f"></i></a>
+            
+            <a href="https://api.whatsapp.com/send?text=Have you ever wonder how long can you hold ypur breath? Check out your lung capacity test now at https://www.doctoroncall.com.my/health-centre/smoking-cessation/test-your-lung-capacity-today"><i class="fab fa-whatsapp"></i></a>
+            
+            <a href="https://twitter.com/intent/tweet?text=Have you ever wonder how long can you hold ypur breath? Check out your lung capacity test now at https://www.doctoroncall.com.my/health-centre/smoking-cessation/test-your-lung-capacity-today"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
     
+
     <script src="bht.js"></script>
 </body>
 </html>
