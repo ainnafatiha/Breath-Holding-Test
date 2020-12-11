@@ -237,7 +237,7 @@ html,
 }
 
 /* 5. CODES FOR SHARE BUTTON */
-.share-result {
+/* .share-result {
   justify-content: center;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -272,7 +272,6 @@ html,
   z-index: 999;
   transition: 0.6s linear;
   border-radius: 20px;
-  /* opacity: 0; */
 }
 
 .share-button:hover span {
@@ -281,7 +280,7 @@ html,
 }
 
 .share-button a {
-  flex: 1; /* flex-grow | flex shrink | flex basis */
+  flex: 1; 
   font-size: 18px;
   color: #2d3436;
   text-align: center;
@@ -309,7 +308,7 @@ html,
 
 .share-button a:nth-of-type(4) {
   transition-delay: 0.4s;
-}
+} */
 
 
 
