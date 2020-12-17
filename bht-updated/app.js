@@ -1,13 +1,11 @@
 /* TABLE OF CONTENT
 
-1. CODES FOR TAKE A DEEP BREATH TIMER
+1. CODES FOR PREPARATION TIMER
 2. CODES FOR HOLD YOUR BREATH TIMER
-3. CODES FOR START AND STOP BUTTON FUNCTION 
-
-*/
+3. CODES FOR CSS FUNCTION */
 
 
-// 1. CODES FOR TAKE A DEEP BREATH TIMER
+// 1. CODES FOR PREPARATION TIMER
 var timeLeft = 3;
 var elem = document.querySelector(".prepare-timer");
 var timerId;
@@ -46,7 +44,7 @@ function tick() {
         timeInSecs++;
     } else {
       clearInterval(ticker);
-      // startTimer(0 * 60);
+      startTimer(0 * 60);
     }
   var mins = Math.floor(secs / 60);
   secs %= 60;
@@ -55,17 +53,14 @@ function tick() {
   document.querySelector(".prepare-timer").style.display = 'none';
 }
 
-//3. CODES FOR START AND STOP BUTTON FUNCTION
-
-//3.1 start button function
+//3. CODES FOR CSS FUNCTION
 function startAnimate() {
   startTimer(0 * 60);
-  document.querySelector(".load").style.animationPlayState='running';
-  document.querySelector(".internal-circle").style.animationPlayState='running';
   document.querySelector(".external-circle").style.animationPlayState='running';
+  document.querySelector(".internal-circle").style.animationPlayState='running';
+  document.querySelector(".load").style.animationPlayState='running';
 }
 
-//3.2 stop button function
 function stopAnimate() {
   document.querySelector(".load").style.animationPlayState='paused';
   document.querySelector(".internal-circle").style.animationPlayState='paused';
