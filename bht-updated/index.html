@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="72">
+    <!-- <meta http-equiv="refresh" content="72"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" >
     <title>Breath Holding Test</title>
@@ -22,7 +22,7 @@
     <!-- 1. CODES FOR INSTRUCTION -->
   <div class="breath-in">
     <p class="breath-title">Breath Holding Test</p>
-    <p><span id="breath-count"></span></p>
+    <p><span id="breath-count">Ready?</span></p>
   </div>
 
     <!-- 2. CODES FOR CIRCLE LOADER -->
@@ -64,7 +64,7 @@
     <div class= "button-breath">
         <button class="start-button" onClick="startCountdown(); startAnimate()">Start</button>
 
-        <button class="stop-button" onClick="clearInterval(ticker);stopAnimate()">Stop</button>
+        <button class="stop-button" onClick="clearInterval(ticker); stopAnimate()">Stop</button>
         
         <button class="reset-button" onClick="window.location.reload();">Reset</button>
     </div>

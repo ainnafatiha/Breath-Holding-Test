@@ -165,16 +165,19 @@ html,
 }
 
 #breath-count {
-  color: #000;
-}
-#breath-count:after {
-  content:"";
-  animation: breathing 85s linear infinite;
-  font-size: 18px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes breathing {
+/* #breath-count:after {
+  content:"";
+  animation: breathing 85s linear;
+  animation-play-state: paused;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* @keyframes breathing {
   0% {
     content: "Take a deep breath";
   }
@@ -193,7 +196,7 @@ html,
   100% {
     content: "Hold your breath...You're doing amazing!";
   }
-}
+} */
 
 /* 3. CODE FOR PERFORMANCE INDICATOR */
 .performance-indicator {
@@ -334,7 +337,3 @@ html,
 .share-button a:nth-of-type(4) {
   transition-delay: 0.4s;
 } */
-
-
-
-
