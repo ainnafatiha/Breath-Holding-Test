@@ -11,7 +11,6 @@ var elem = document.querySelector(".prepare-timer");
 var timerId;
 
 function startCountdown() {
-  document.querySelector(".breath-count").innerHTML = "Take a deep breath";
   timerId = setInterval("countdown()", 1200);
 }
 
@@ -38,7 +37,6 @@ function startTimer(secs) {
 }
 
 function tick() {
-  document.querySelector(".breath-count").innerHTML = "Hold your breath";
   var secs = timeInSecs;
     if (secs < 60) {
         timeInSecs++;
@@ -52,17 +50,19 @@ function tick() {
   document.querySelector(".timer").innerHTML = pretty;
   document.querySelector(".prepare-timer").style.display = 'none';
 }
-startTimer(0 * 60);
 
 //3. CODES FOR CSS FUNCTION
+function startAnimate() {
+  startTimer(0 * 60);
+  document.querySelector(".external-circle").style.animationPlayState='running';
+  document.querySelector(".internal-circle").style.animationPlayState='running';
+  document.querySelector(".load").style.animationPlayState='running';
+  
+}
+
 function stopAnimate() {
   document.querySelector(".load").style.animationPlayState='paused';
   document.querySelector(".internal-circle").style.animationPlayState='paused';
   document.querySelector(".external-circle").style.animationPlayState='paused';
-}
 
-function startAnimate() {
-  document.querySelector(".external-circle").style.animationPlayState='running';
-  document.querySelector(".internal-circle").style.animationPlayState='running';
-  document.querySelector(".timer");
 }
