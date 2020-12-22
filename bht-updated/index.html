@@ -1,9 +1,9 @@
 <!-- TABLE OF CONTENT
 
 1. CODES FOR INSTRUCTION
-2. CODES FOR CIRCLE LOADER
-3. CODES FOR PERFORMANCE INDICATOR
-4. CODES FOR SHARE BUTTONS
+2. CODES FOR BUTTONS
+3. CODES FOR CIRCLE LOADER
+4. CODES FOR PERFORMANCE INDICATOR
 5. CODES FOR SHARE BUTTON -->
 
 
@@ -21,11 +21,21 @@
 
     <!-- 1. CODES FOR INSTRUCTION -->
   <div class="breath-in">
-    <p class="breath-title">Breath Holding Test</p>
-    <p><span id="breath-count">Ready?</span></p>
+    <p class="breath-title">Breath-Holding Test</p>
+    <p><span id="breath-count">Get ready to take a deep breath</span></p>
   </div>
+  
+  <!-- 2. CODES FOR BUTTONS -->
+  <div class= "button-breath">
+    <button class="start-button" onClick="startCountdown(); startAnimate()">Start</button>
 
-    <!-- 2. CODES FOR CIRCLE LOADER -->
+    <button class="stop-button" onClick="clearInterval(ticker); stopAnimate()">Stop</button>
+    
+    <button class="reset-button" onClick="window.location.reload();">Reset</button>
+</div>
+<br>
+
+    <!-- 3. CODES FOR CIRCLE LOADER -->
     <div class= "circle-breath">
         <svg class= "external-circle" width= "250" height="250" viewBox= "0 0 10 10">
             <defs>
@@ -50,7 +60,7 @@
     </div>
     <br>
 
-    <!-- 3. CODES FOR PERFORMANCE INDICATOR -->
+    <!-- 4. CODES FOR PERFORMANCE INDICATOR -->
     <div class="performance-indicator">Lung Capacity Performance</div>
         <div class= "breath-performance">
             <p><span class="dot-red"></span>  Poor</p>
@@ -58,16 +68,6 @@
             <p><span class="dot-green"></span>  Amazing</p>         
         </div>
     
-    <br>
-
-    <!-- 4. CODES FOR BUTTONS -->
-    <div class= "button-breath">
-        <button class="start-button" onClick="startCountdown(); startAnimate()">Start</button>
-
-        <button class="stop-button" onClick="clearInterval(ticker); stopAnimate()">Stop</button>
-        
-        <button class="reset-button" onClick="window.location.reload();">Reset</button>
-    </div>
     <br>
 
     <!-- 5. CODES FOR SHARE BUTTON

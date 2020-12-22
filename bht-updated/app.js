@@ -44,7 +44,8 @@ function tick() {
         timeInSecs++;
     } else {
       clearInterval(ticker);
-      startTimer(0 * 60);
+      // startTimer(0 * 60);
+      document.getElementById("breath-count").innerHTML = "Good job!";
     }
   var mins = Math.floor(secs / 60);
   secs %= 60;
@@ -53,12 +54,13 @@ function tick() {
   document.querySelector(".prepare-timer").style.display = 'none';
 }
 
+
 //3. CODES FOR CSS FUNCTION
 function startAnimate() {
   startTimer(0 * 60);
-  document.querySelector(".external-circle").style.animationPlayState='running';
-  document.querySelector(".internal-circle").style.animationPlayState='running';
   document.querySelector(".load").style.animationPlayState='running';
+  document.querySelector(".internal-circle").style.animationPlayState='running';
+  document.querySelector(".external-circle").style.animationPlayState='running';
 }
 
 function stopAnimate() {
