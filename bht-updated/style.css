@@ -219,6 +219,7 @@ html,
   border-radius: 50%;
   display: inline-block;
   height: 10px;
+  margin-right: 2px;
   width: 10px;
 }
 
@@ -227,6 +228,7 @@ html,
   border-radius: 50%;
   display: inline-block;
   height: 10px;
+  margin-right: 2px;
   width: 10px;
 }
 
@@ -235,6 +237,7 @@ html,
   border-radius: 50%;
   display: inline-block;
   height: 10px;
+  margin-right: 2px;
   width: 10px;
 }
   
@@ -247,7 +250,6 @@ html,
 .reset-button,
 .stop-button,
 .start-button {
-  background: rgb(61,114,209);
   background: linear-gradient(180deg, rgba(61,114,209,1) 40%, rgba(176,145,231,1) 100%);
   border-radius: 25px;
   border: none;
@@ -262,6 +264,11 @@ html,
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  outline: none;
+}
+
+.start-button:disabled {
+  background: gray;
 }
 
 /* 5. CODES FOR SHARE BUTTON */
