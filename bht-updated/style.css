@@ -267,8 +267,8 @@ html,
   outline: none;
 }
 
-.start-button:disabled {
-  background: gray;
+.start-button:disabled, .stop-button:disabled {
+  background: #808080;
 }
 
 /* 5. CODES FOR SHARE BUTTON */

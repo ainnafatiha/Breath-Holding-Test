@@ -76,8 +76,9 @@ var ticker;
 function startTimer(secs) {
   setTimeout(() => {
     timeInSecs = parseInt(secs);
-    ticker = setInterval("startTicking()", 1000);
-  }, 5000); 
+    ticker = setInterval("startTicking()", 950);
+    document.getElementById("st-button").disabled=false;
+  }, 6000); 
 }
 
 function startTicking() {
@@ -117,7 +118,7 @@ function startAnimate(start) {
   start.disabled = true;
 }
 
-function stopAnimate() {
+function stopAnimate(stop) {
   document.querySelector(".load").style.animationPlayState='paused';
   document.querySelector(".internal-circle").style.animationPlayState='paused';
   document.querySelector(".external-circle").style.animationPlayState='paused';
@@ -164,6 +165,7 @@ function changeLanguagePack() {
     try {
       console.log(langPack[lang][key]);
       document.getElementById(key).innerHTML=langPack[lang][key];
+    
     } catch(e) {
       console.log(key);
       console.log(e);
